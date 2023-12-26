@@ -14,7 +14,16 @@ public class Main {
             card_num[i]+=1;
         }
     }
+    public static void new_game(){
+        MainFrame Frame=new MainFrame();
+        gen_ran();
+        Frame.reset();
+        //Frame.Init_listener();
 
+        btnListener.copy_num(card_num);
+        MainFrame.copy_num(card_num);
+        System.out.println("reset");
+    }
     public static void main(String[] args){
         System.out.println("hello");
         MainFrame Frame=new MainFrame();
@@ -25,5 +34,9 @@ public class Main {
             System.out.print(" ");
         }
         Frame.show_card(card_num);
+        Frame.Init_listener();
+
+        btnListener.copy_num(card_num);
+        MainFrame.copy_num(card_num);
     }
 }
